@@ -1,12 +1,11 @@
 <script lang="ts">
 	import Section from './Section.svelte';
+	import { resume } from '$lib/stores';
+	import { getSections } from '$lib/dataflow';
 
-	type Props = { sections: { [key: string]: Resume.Section } };
-	let { sections }: Props = $props();
-
-	let sectionList = $derived(Object.entries(sections));
+	const sections = $derived($resume ? getSections($resume) : []);
 </script>
 
-{#each sectionList as [title, section], i (title)}
-	<Section title={section.text ?? title} {section} divider={i + 1 != sectionList.length} />
+{#each sections as [title, section], i (title)}
+	<Section {title} {section} divider={i + 1 != sections.length} />
 {/each}

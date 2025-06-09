@@ -1,5 +1,6 @@
 <script lang="ts">
-	type Props = { contact: Resume.Contact; title: string };
+	type Contact = string | { url: string; text: string };
+	type Props = { contact: Contact; title: string };
 	let { title, contact }: Props = $props();
 </script>
 
@@ -8,7 +9,7 @@
 		<span>{contact}</span>
 		<!-- <span>{title.toUpperCase()}</span> -->
 	</div>
-{:else if !contact.hidden}
+{:else}
 	<div class="text-xs">
 		<span>
 			{contact.url ?? contact.text}

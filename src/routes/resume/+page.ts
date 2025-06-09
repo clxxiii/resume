@@ -5,11 +5,11 @@ export const load: PageLoad = ({ data }) => {
 	// because for some reason the reassignment below edits the
 	// actual imported resume.
 	// What on earth is wrong with javascript
-	data.resume.contact.address = { hidden: true };
-	data.resume.contact.phone = { hidden: true };
+	// delete data.resume.basics.location;
+	delete data.resume.basics.phone;
 
-	if (data.contacts?.address) data.resume.contact.address = data.contacts.address;
-	if (data.contacts?.phone) data.resume.contact.phone = data.contacts.phone;
+	// if (data.contacts?.address) data.resume.basics.location =
+	if (data.contacts?.phone) data.resume.basics.phone = data.contacts.phone;
 
 	return data;
 };

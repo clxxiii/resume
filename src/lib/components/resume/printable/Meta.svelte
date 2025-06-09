@@ -1,20 +1,23 @@
 <script lang="ts">
 	import Contact from './Contact.svelte';
+	import { resume } from '$lib/stores';
+	import { getContacts } from '$lib/dataflow';
 
-	type Props = { name: string; headline?: string; contacts: { [key: string]: Resume.Contact } };
-	let { name, headline, contacts }: Props = $props();
-
-	let contactList = $derived(Object.entries(contacts));
+	let contactList = $derived($resume ? getContacts($resume) : []);
 </script>
 
-<div class="flex justify-between border-b-4 border-black">
-	<div>
-		<h1 class="font-display text-3xl tracking-widest uppercase">{name}</h1>
-		<h1 class="font-display text-2xl font-extralight tracking-wide uppercase">{headline}</h1>
+{#if $resume && $resume.basics}
+	<div class="flex justify-between border-b-4 border-black">
+		<div>
+			<h1 class="font-display text-3xl tracking-widest uppercase">{$resume.basics.name}</h1>
+			<h1 class="font-display text-2xl font-extralight tracking-wide uppercase">
+				{$resume.basics.label}
+			</h1>
+		</div>
+		<div class="text-right">
+			{#each contactList as [title, contact] (title)}
+				<Contact {title} {contact} />
+			{/each}
+		</div>
 	</div>
-	<div class="text-right">
-		{#each contactList as [title, contact] (title)}
-			<Contact {title} {contact} />
-		{/each}
-	</div>
-</div>
+{/if}

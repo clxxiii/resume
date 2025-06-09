@@ -5,13 +5,13 @@
 	import { page } from '$app/state';
 	import { source } from '$lib/stores';
 
-	type Props = { resume: Resume; qr_code?: boolean };
-	let { resume, qr_code = true }: Props = $props();
+	type Props = { qr_code?: boolean };
+	let { qr_code = true }: Props = $props();
 </script>
 
 <div class="relative hidden text-black print:block">
-	<Meta name={resume.name} headline={resume.headline} contacts={resume.contact} />
-	<SectionBlock sections={resume.sections} />
+	<Meta />
+	<SectionBlock />
 
 	{#if qr_code}
 		<div

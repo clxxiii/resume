@@ -1,91 +1,171 @@
-name: Eli Fereira
-headline: Full Stack Enthusiast
+# This resume follows the json-resume format, meaning other resumes built with the
+# same schema can be rendered by this site, and my resume can be rendered by other
+# JSON schema generators.
+$schema: https://raw.githubusercontent.com/jsonresume/resume-schema/refs/heads/master/schema.json
 
-contact:
-  address:
-    hidden: true
-  phone:
-    hidden: true
-  email: 'eli@fereira.net'
-  github:
-    text: clxxiii
-    url: https://github.com/clxxiii
-    icon: github
-  website:
-    text: eli.fereira.net
-    url: https://eli.fereira.net
-    icon: link
-  linkedin:
-    text: Eli Fereira
-    url: https://www.linkedin.com/in/eli-fereira/
-    icon: linkedin
+basics:
+  name: Eli Fereira
+  label: Full Stack Enthusiast
+  email: eli@fereira.net
+  url: eli.fereira.net
+  location:
+    region: New York
+    countryCode: US
+  profiles:
+    - network: github
+      url: https://github.com/clxxiii
+      username: clxxiii
+    - network: linkedin
+      url: https://www.linkedin.com/in/eli-fereira/
+      username: eli-fereira
 
-sections:
-  projects:
-    bingo:
-      title: osu!Bingo
-      url: https://github.com/clxxiii/osu-bingo
-      date: Jun 2024 - Present
-      details:
-        - Designed a basic protocol to sync game state with multiple browsers using server-sent events.
-        - Built a dynamic frontend to fit multiple devices using SvelteKit and Tailwind.
-        - Integrated with the osu REST API using OAuth to fetch user information.
-        - Set up continuous integration using GitHub Actions to ensure code quality.
-        - Deployed the project using Docker Compose and Turso to AWS with EC2.
-    yagami:
-      title: Yagami
-      url: https://github.com/yagamiapp/yagami
-      date: Mar 2022 - Oct 2023
-      details:
-        - Built an algorithm to run a tournament match procedure with a typescript-based IRC chatbot.
-        - Utilized functional-programming concepts to allow for easy testing and to minimize edge cases.
+projects:
+  - name: osu!Bingo
+    type: projects
+    url: https://github.com/clxxii/osu-bingo
+    startDate: 2024-01
+    highlights:
+      - Designed a basic protocol to sync game state with multiple browsers using server-sent events.
+      - Built a dynamic frontend to fit multiple devices using SvelteKit and Tailwind.
+      - Integrated with the osu REST API using OAuth to fetch user information.
+      - Set up continuous integration using GitHub Actions to ensure code quality.
+      - Deployed the project using Docker Compose and Turso to AWS with EC2.
+  - name: Yagami
+    type: projects
+    url: https://github.com/yagamiapp/yagami
+    startDate: 2022-03
+    endDate: 2023-10
+    highlights:
+      - Built an algorithm to run a tournament match procedure with a typescript-based IRC chatbot.
+      - Utilized functional-programming concepts to allow for easy testing and to minimize edge cases.
+  - name: Hackathons
+    type: professional development
+    roles:
+      - Participant
+      - Organizer
+    highlights:
+      - Participated in 5 hackathons throughout the 2024-2025 academic year, creating problem-solving projects while collaborating with several different teams.
+      - Strengthened collaboration and teamwork capabilities while honing technical proficiencies.
+      - Helped with the organization of Lakerhacks, leading a frontend workshop to equip novice hackers with essential web development skills, and orchestrated various activities throughout the event.
+  - name: CSC480 - Software Design
+    type: professional development
+    roles:
+      - GUI Team Focal Point
+    startDate: 2025-01
+    endDate: 2025-05
+    highlights:
+      - Directed a team of student developers in crafting a accessibility-focused frontend with React and Bootstrap, enhancing usability for our project.
+      - Implemented an efficient build process for numerous microservices through Docker and Docker Compose, reducing deployment time and streamlining development.
+  - name: Computer Science Association
+    type: professional development
+    startDate: 2025-05
+    endDate: 2024-08
+    roles:
+      - Member
+      - President
+    highlights:
+      - Led a team of five CS students to help organize events.
+      - Hosted workshops and activities to engage and teach computer science students.
 
-  education:
-    undergrad:
-      title: Bachelor of Science in Computer Science, Minor in Mathematics
-      organization: State University of New York, Oswego
-      date: Graduated May 2025
-      details:
-        - Awarded the Oebele Van Dyk Outstanding Computer Science Senior Award, representing excellence in computer science studies.
-        - Earned Dean's List recognition on six different semesters for academic excellence.
+education:
+  - institution: State University of New York, Oswego
+    area: Computer Science, Minor in Mathematics
+    studyType: Bachelor of Science
+    startDate: 2021-08
+    endDate: 2025-05
+    courses:
+      - CSC375 - Parallel Computing
+      - CSC480 - Software Design
+      - CSC445 - Computer Networks
+    highlights:
+      - Awarded the Oebele Van Dyk Outstanding Computer Science Senior Award, representing excellence in computer science studies.
+      - Earned Dean's List recognition on six different semesters for academic excellence.
 
-  work:
-    tutoring:
-      title: Peer Tutor
-      organization: SUNY Oswego
-      date: Jan 2024 - May 2025
-      details:
-        - Assisted peers with lower level Computer Science and Mathematics courses.
-        - Organized events for underclassmen exam prep and project help.
-    afrl-intern:
-      title: Intern
-      organization: Air Force Research Lab
-      location: Dayton, OH
-      date: May 2024 - Aug 2024
-      details:
-        - Built a REST API and frontend interface from an existing JavaFX codebase and UI using SvelteKit, D3.js, and Spring Boot.
-        - Worked on research related to ontologies, natural language processing, and computational reasoning.
-        - Refined and improved dev environments for easier first-time setup.
+work:
+  - name: SUNY Oswego
+    position: Peer Tutor
+    location: Oswego, NY
+    startDate: 2024-01
+    endDate: 2025-05
+    highlights:
+      - Assisted peers with lower level Computer Science and Mathematics courses.
+      - Organized events for underclassmen exam prep and project help.
+  - name: Air Force Research Lab
+    position: Intern
+    location: Dayton, OH
+    startDate: 2024-05
+    endDate: 2024-08
+    highlights:
+      - Built a REST API and frontend interface from an existing JavaFX codebase and UI using SvelteKit, D3.js, and Spring Boot.
+      - Worked on research related to ontologies, natural language processing, and computational reasoning.
+      - Refined and improved dev environments for easier first-time setup.
+# Old Sections:
+# sections:
+#   projects:
+#     bingo:
+#       title: osu!Bingo
+#       url: https://github.com/clxxiii/osu-bingo
+#       date: Jun 2024 - Present
+#       details:
+#         - Designed a basic protocol to sync game state with multiple browsers using server-sent events.
+#         - Built a dynamic frontend to fit multiple devices using SvelteKit and Tailwind.
+#         - Integrated with the osu REST API using OAuth to fetch user information.
+#         - Set up continuous integration using GitHub Actions to ensure code quality.
+#         - Deployed the project using Docker Compose and Turso to AWS with EC2.
+#     yagami:
+#       title: Yagami
+#       url: https://github.com/yagamiapp/yagami
+#       date: Mar 2022 - Oct 2023
+#       details:
+#         - Built an algorithm to run a tournament match procedure with a typescript-based IRC chatbot.
+#         - Utilized functional-programming concepts to allow for easy testing and to minimize edge cases.
 
-  development:
-    text: Professional Development
-    hackathons:
-      title: Participant, Organizer
-      organization: Hackathons
-      details:
-        - Participated in 5 hackathons throughout the 2024-2025 academic year, creating problem-solving projects while collaborating with several different teams.
-        - Strengthened collaboration and teamwork capabilities while honing technical proficiencies.
-        - Helped with the organization of Lakerhacks, leading a frontend workshop to equip novice hackers with essential web development skills, and orchestrated various activities throughout the event.
-    csc480:
-      title: GUI Team Focal Point
-      organization: CSC480 - Software Design
-      date: Jan 2025 - May 2025
-      details:
-        - Directed a team of student developers in crafting a accessibility-focused frontend with React and Bootstrap, enhancing usability for our project.
-        - Implemented an efficient build process for numerous microservices through Docker and Docker Compose, reducing deployment time and streamlining development.
-    csa:
-      title: President
-      organization: Computer Science Association
-      details:
-        - Led a team of five CS students to help organize events.
-        - Hosted workshops and activities to engage and teach computer science students.
+#   education:
+#     undergrad:
+#       title: Bachelor of Science in Computer Science, Minor in Mathematics
+#       organization: State University of New York, Oswego
+#       date: Graduated May 2025
+#       details:
+#         - Awarded the Oebele Van Dyk Outstanding Computer Science Senior Award, representing excellence in computer science studies.
+#         - Earned Dean's List recognition on six different semesters for academic excellence.
+
+#   work:
+#     tutoring:
+#       title: Peer Tutor
+#       organization: SUNY Oswego
+#       date: Jan 2024 - May 2025
+#       details:
+#         - Assisted peers with lower level Computer Science and Mathematics courses.
+#         - Organized events for underclassmen exam prep and project help.
+#     afrl-intern:
+#       title: Intern
+#       organization: Air Force Research Lab
+#       location: Dayton, OH
+#       date: May 2024 - Aug 2024
+#       details:
+#         - Built a REST API and frontend interface from an existing JavaFX codebase and UI using SvelteKit, D3.js, and Spring Boot.
+#         - Worked on research related to ontologies, natural language processing, and computational reasoning.
+#         - Refined and improved dev environments for easier first-time setup.
+
+#   development:
+#     text: Professional Development
+#     hackathons:
+#       title: Participant, Organizer
+#       organization: Hackathons
+#       details:
+#         - Participated in 5 hackathons throughout the 2024-2025 academic year, creating problem-solving projects while collaborating with several different teams.
+#         - Strengthened collaboration and teamwork capabilities while honing technical proficiencies.
+#         - Helped with the organization of Lakerhacks, leading a frontend workshop to equip novice hackers with essential web development skills, and orchestrated various activities throughout the event.
+#     csc480:
+#       title: GUI Team Focal Point
+#       organization: CSC480 - Software Design
+#       date: Jan 2025 - May 2025
+#       details:
+#         - Directed a team of student developers in crafting a accessibility-focused frontend with React and Bootstrap, enhancing usability for our project.
+#         - Implemented an efficient build process for numerous microservices through Docker and Docker Compose, reducing deployment time and streamlining development.
+#     csa:
+#       title: President
+#       organization: Computer Science Association
+#       details:
+#         - Led a team of five CS students to help organize events.
+#         - Hosted workshops and activities to engage and teach computer science students.

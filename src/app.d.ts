@@ -1,4 +1,5 @@
 import * as db from '$lib/server/db/schema';
+
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
 declare global {
@@ -21,35 +22,6 @@ declare global {
 		description?: string;
 		images?: string[];
 	};
-
-	type Resume = {
-		name: string;
-		headline: string;
-		contact: { [key: string]: Resume.Contact };
-		sections: { [key: string]: Resume.Section };
-	};
-
-	namespace Resume {
-		type Section = {
-			text?: string;
-			[key: string]: Entry;
-		};
-		type Entry = {
-			title?: string;
-			url?: string;
-			organization?: string;
-			date?: string;
-			details?: string | string[];
-		};
-		type Contact =
-			| string
-			| {
-					text?: string;
-					url?: string;
-					icon?: string;
-					hidden?: boolean;
-			  };
-	}
 }
 
 export {};

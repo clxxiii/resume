@@ -21,13 +21,15 @@
 		email: Mail,
 		github: Github,
 		link: Link,
+		url: Link,
 		linkedin: Linkedin,
 		phone: Phone,
 		address: MapPin,
+		location: MapPin,
 		projects: HardHat,
 		work: Briefcase,
-		development: Handshake,
-		education: GraduationCap
+		education: GraduationCap,
+		'professional development': Handshake
 	};
 </script>
 
