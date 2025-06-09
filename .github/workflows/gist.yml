@@ -1,0 +1,24 @@
+name: Update Resume Gist
+
+on: push
+
+jobs:
+  update-resume-gist:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+      
+    - name: YAML to JSON
+      uses: NeddM/YAML-to-JSON@v1
+      with:
+        input: src/lib/assets/resume.yml
+        output: resume.json
+
+    - name: Update Resume Gist
+      uses: exuanbo/actions-deploy-gist@v1
+      with:
+        token: ${{ secrets.GIST_TOKEN }}
+        gist_id: 769c43315a4aa0495cd5a205701452cb
+        file_path: resume.json
+
