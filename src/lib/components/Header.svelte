@@ -45,9 +45,11 @@
 	<!-- Mobile Bar -->
 	<div class="flex h-6 w-full items-center justify-between px-1 sm:hidden">
 		<div class="font-display font-light tracking-wide uppercase">{currentPage}</div>
-		<button onclick={() => (menuShown = true)}>
-			<MenuIcon size={30} />
-		</button>
+		{#if !menuShown}
+			<button onclick={() => (menuShown = true)}>
+				<MenuIcon size={30} />
+			</button>
+		{/if}
 	</div>
 </div>
 
@@ -56,13 +58,15 @@
 
 <!-- Mobile Menu -->
 {#if menuShown}
-	<div
+	<button
+		onclick={() => (menuShown = false)}
+		aria-label="dimmed-backgrouned"
 		transition:fade={{ duration: 250 }}
-		class="fixed inset-0 z-10 bg-black/25 backdrop-blur-xs"
-	></div>
+		class="fixed inset-0 z-20 bg-black/25 backdrop-blur-xs"
+	></button>
 	<div
 		transition:slide={{ duration: 250 }}
-		class="bg-ctp-base fixed top-0 left-0 z-20 w-full rounded-b-xl shadow-lg"
+		class="bg-ctp-base fixed top-0 left-0 z-30 w-full rounded-b-xl shadow-lg"
 	>
 		<div class="flex w-full justify-between p-2 text-gray-400">
 			<div class="font-display flex items-center gap-2 text-xl font-light tracking-wide uppercase">
