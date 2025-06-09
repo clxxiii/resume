@@ -33,7 +33,7 @@
 	const currentPage = $derived(links.find((x) => x.href == page.url.pathname)?.text ?? 'ELI');
 </script>
 
-<div class="fixed z-10 flex w-full justify-center p-2 sm:static">
+<div class="bg-ctp-mantle fixed z-30 flex w-full justify-center p-2 sm:static sm:bg-transparent">
 	<div
 		class="bg-ctp-crust hidden h-12 w-fit items-center justify-center gap-2 rounded-full px-10 sm:flex"
 	>

@@ -29,7 +29,7 @@
 	<title>Eli Fereira</title>
 </svelte:head>
 
-<div class="latte text-ctp-text bg-ctp-base relative flex min-h-screen flex-col justify-between">
+<div class="text-ctp-text relative flex min-h-screen flex-col justify-between">
 	<div>
 		<header class="w-full print:hidden">
 			<Header />
