@@ -21,6 +21,7 @@
 		email: Mail,
 		github: Github,
 		link: Link,
+		website: Link,
 		url: Link,
 		linkedin: Linkedin,
 		phone: Phone,
