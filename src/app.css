@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+@plugin "@catppuccin/tailwindcss";
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('/fonts/Oswald-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('/fonts/Nunito-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('/fonts/Nunito-Italic-VariableFont_wght.ttf');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/fonts/Inter-VariableFont_opsz,wght.ttf');
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/fonts/Inter-Italic-VariableFont_opsz,wght.ttf');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+	src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+	src: url('/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf');
+	font-style: italic;
+}
+
+@utility clay {
+	--color: rgba(0, 0, 0, 0.06);
+	box-shadow:
+		2px 2px 8px var(--color),
+		inset -8px -8px 10px var(--color);
+}
+
+body {
+	@apply bg-ctp-mantle text-ctp-text;
+}
+
+@theme {
+	--font-display: 'Oswald', sans-serif;
+	--font-block: 'Inter', sans;
+	--font-sans: 'Nunito', sans;
+	--font-monospace: 'JetBrainsMono', monospace;
+}
+
+@theme inline {
+	--color-ctp-rosewater: rgba(var(--ctp-rosewater));
+	--color-ctp-flamingo: rgba(var(--ctp-flamingo));
+	--color-ctp-pink: rgba(var(--ctp-pink));
+	--color-ctp-mauve: rgba(var(--ctp-mauve));
+	--color-ctp-red: rgba(var(--ctp-red));
+	--color-ctp-maroon: rgba(var(--ctp-maroon));
+	--color-ctp-peach: rgba(var(--ctp-peach));
+	--color-ctp-yellow: rgba(var(--ctp-yellow));
+	--color-ctp-green: rgba(var(--ctp-green));
+	--color-ctp-teal: rgba(var(--ctp-teal));
+	--color-ctp-sky: rgba(var(--ctp-sky));
+	--color-ctp-sapphire: rgba(var(--ctp-sapphire));
+	--color-ctp-blue: rgba(var(--ctp-blue));
+	--color-ctp-lavender: rgba(var(--ctp-lavender));
+	--color-ctp-text: rgba(var(--ctp-text));
+	--color-ctp-subtext1: rgba(var(--ctp-subtext1));
+	--color-ctp-subtext0: rgba(var(--ctp-subtext0));
+	--color-ctp-overlay2: rgba(var(--ctp-overlay2));
+	--color-ctp-overlay1: rgba(var(--ctp-overlay1));
+	--color-ctp-overlay0: rgba(var(--ctp-overlay0));
+	--color-ctp-surface2: rgba(var(--ctp-surface2));
+	--color-ctp-surface1: rgba(var(--ctp-surface1));
+	--color-ctp-surface0: rgba(var(--ctp-surface0));
+	--color-ctp-base: rgba(var(--ctp-base));
+	--color-ctp-mantle: rgba(var(--ctp-mantle));
+	--color-ctp-crust: rgba(var(--ctp-crust));
+}
